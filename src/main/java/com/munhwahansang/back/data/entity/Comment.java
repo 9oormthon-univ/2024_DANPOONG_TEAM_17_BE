@@ -31,6 +31,7 @@ public class Comment {
 
     private Comment(User user, Post post, String content) {
         this.user = user;
+        this.post = post;
         this.content = content;
         this.createdAt = LocalDateTime.now();
         this.isDeleted = false;
