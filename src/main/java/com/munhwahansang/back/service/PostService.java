@@ -23,4 +23,8 @@ public class PostService {
         return postRepository.findAllByIsDeletedFalse(pageable);
     }
 
+    // 카테고리별 게시글 조회
+    public Page<PostFindResponse> findPostsByCategory(Long categoryId, Pageable pageable) {
+        return postRepository.findAllByCategoryIdAndIsDeletedFalse(categoryId, pageable);
+    }
 }
