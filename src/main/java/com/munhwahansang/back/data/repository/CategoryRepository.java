@@ -1,0 +1,7 @@
+package com.munhwahansang.back.data.repository;
+
+import com.munhwahansang.back.data.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository  extends JpaRepository<Category, Long> {
+}

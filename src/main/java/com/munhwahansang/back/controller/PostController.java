@@ -23,6 +23,7 @@ public class PostController {
 
     private final CommentService commentService;
 
+    //모든 게시글 조회
     @GetMapping
     public ResponseEntity<Page<PostFindResponse>> findAllPost(Pageable pageable) {
         return new ResponseEntity<>(postService.findAllPost(pageable), HttpStatus.OK);
@@ -33,5 +34,10 @@ public class PostController {
         return new ResponseEntity<>(new PostCommentResponse(postService.findPost(id), commentService.findPostComments(id)), HttpStatus.OK);
     }
 
+    // 카테고리별 게시글 조회
+    @GetMapping("/category/{categoryId}")
+    public ResponseEntity<Page<PostFindResponse>> findPostsByCategory(@PathVariable Long categoryId, Pageable pageable) {
+        return new ResponseEntity<>(postService.findPostsByCategory(categoryId, pageable), HttpStatus.OK);
+    }
 
 }
