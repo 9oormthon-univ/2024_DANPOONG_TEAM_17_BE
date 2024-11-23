@@ -80,14 +80,12 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+
           script: |
             sudo docker ps -q | xargs --no-run-if-empty sudo docker stop
             sudo docker ps -a -q | xargs --no-run-if-empty sudo docker rm
 
             sudo docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/munhwahansang_server || true
-            
-            sudo docker rm -f munhwahansang_server
-            
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/munhwahansang_server:latest
             
             sudo docker run -d -p 8080:8080 \
