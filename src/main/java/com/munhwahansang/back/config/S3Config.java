@@ -11,10 +11,10 @@ import software.amazon.awssdk.services.s3.S3Client;
 @Configuration
 public class S3Config {
 
-    @Value("${s3-access}")
+    @Value("${cloud.aws.credentials.access-key}")
     private String accessKey;
 
-    @Value("${s3-secret}")
+    @Value("${cloud.aws.credentials.secret-key}")
     private String secretKey;
 
     private final Region region = Region.AP_NORTHEAST_2; // 서울 리전
