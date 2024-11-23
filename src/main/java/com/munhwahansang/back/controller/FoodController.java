@@ -5,12 +5,14 @@ import com.munhwahansang.back.data.dto.food.request.FoodFindRequest;
 import com.munhwahansang.back.data.dto.food.request.FoodUpdateRequest;
 import com.munhwahansang.back.data.dto.food.response.FoodFindResponse;
 import com.munhwahansang.back.service.FoodService;
+import com.munhwahansang.back.service.ImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/foods")
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.*;
 public class FoodController {
 
     private final FoodService foodService;
+
+    private final ImageService imageService;
 
     private static final String INCLUDE = "include";
 
@@ -33,8 +37,11 @@ public class FoodController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    public void createFood(@RequestBody FoodCreateRequest request) {
-        foodService.createFood(request);
+    public void createFood(@RequestPart FoodCreateRequest request,@RequestPart MultipartFile file) {
+
+        String imagePath = imageService.uploadFile(file);
+
+        foodService.createFood(imagePath, request);
     }
 
     @PutMapping

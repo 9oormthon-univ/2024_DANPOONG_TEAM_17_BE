@@ -23,23 +23,24 @@ public class Food {
 
     private String imagePath;
 
-    public Food(String name, String explanation, String ingredients) {
+    public Food(String imagePath, String name, String explanation, String ingredients) {
         this.name = name;
         this.explanation = explanation;
         this.ingredients = ingredients;
-        this.imagePath = null;
+        this.imagePath = imagePath;
     }
 
     public Integer getId() {
         return id;
     }
 
-    public static Food of(FoodCreateRequest request) {
-        return new Food(request.name(), request.explanation(), request.ingredients());
+    public static Food of(String imagePath, FoodCreateRequest request) {
+
+        return new Food(imagePath, request.name(), request.explanation(), request.ingredients());
     }
 
     public FoodFindResponse convertToFindResponse() {
-        return new FoodFindResponse(imagePath,name, explanation, ingredients);
+        return new FoodFindResponse(imagePath, name, explanation, ingredients);
     }
 
     public void update(FoodUpdateRequest request) {

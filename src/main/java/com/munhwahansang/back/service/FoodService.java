@@ -20,8 +20,8 @@ public class FoodService {
     private final FoodRepository foodRepository;
 
     @Transactional
-    public Food createFood(FoodCreateRequest request) {
-        return foodRepository.save(Food.of(request));
+    public Food createFood(String imagePath, FoodCreateRequest request) {
+        return foodRepository.save(Food.of(imagePath,request));
     }
 
     @Transactional
