@@ -86,6 +86,8 @@ jobs:
 
             sudo docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/munhwahansang_server || true
             
+            sudo docker rm -f munhwahansang_server
+            
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/munhwahansang_server:latest
             
             sudo docker run -d -p 8080:8080 \
