@@ -1,19 +1,27 @@
-- My-Music-Note는 일기와 음악을 통한 심리치료 서비스입니다.
+## 문화한상’은 한 상 가득 차려진 푸짐한 음식처럼, 다양한 문화를 한 자리에 모아 외국인의 정착 생활을 돕는 플랫폼입니다.  
 
 
-### 구성원
-| <a href="https://github.com/masiljangajji"><img src="https://github.com/masiljangajji.png" width="100px"><br>BE 이승재</a> | <a href="https://github.com/celinayk"><img src="https://github.com/celinayk.png" width="100px"><br>BE 류연경</a> | <a href="https://github.com/kar702"><img src="https://github.com/kar702.png" width="100px"><br>PM 김아름</a> |<a href="https://github.com/E2YunJeong"><img src="https://github.com/E2YunJeong.png" width="100px"><br>FE 이윤정</a> 
-|-----|-----|-----|----|
+| <a href="https://github.com/kar702"><img src="https://github.com/kar702.png" width="100px"><br>PM 김아름</a> | <a href="https://github.com/hyoseung-jang"><img src="https://github.com/hyoseung-jang.png" width="100px"><br>DE 장효승</a> | <a href="https://github.com/E2YunJeong"><img src="https://github.com/E2YunJeong.png" width="100px"><br>FE 이윤정</a> | <a href="https://github.com/masiljangajji"><img src="https://github.com/masiljangajji.png" width="100px"><br>BE 이승재</a> | <a href="https://github.com/celinayk"><img src="https://github.com/celinayk.png" width="100px"><br>BE 류연경</a> |
+|-----|-----|-----|-----|-----|
+
 
 ### 개발 환경
-- 개발도구: Intellij IDEA - Ultimate
-- 언어: Java 17 LTS, <br>
-- 빌드도구: Gradle
+- 개발도구
+  - Intellij IDEA Ultimate
+  - VS Code
+- 언어
+  - Java 17 LTS
+  - JavaScript
+- 빌드도구
+  - Gradle
+  - npm:10.9.0
 - 개발
   - Spring 6.1
   - Spring Boot: 3.3.4
-  - Spring Data
-    - Spring Data JPA
+  -Spring Data JPA
+  - Node.js:v22.11.0
+  - React
+    
 - Cloud
   - AWS 
 - CI/CD
@@ -38,6 +46,7 @@
 <br>
 ![JPA](https://img.shields.io/badge/JPA-007396.svg?style=for-the-badge&logo=java&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C.svg?style=for-the-badge&logo=hibernate&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-blue?style=for-the-badge&logo=MySQL)
 <br>
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![AWS S3](https://img.shields.io/badge/Amazon%20S3-569A31.svg?style=for-the-badge&logo=amazon-s3&logoColor=white)
