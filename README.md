@@ -13,7 +13,6 @@
   - VS Code
 - 언어
   - Java 17 LTS
-  - JavaScript
 - 빌드도구
   - Gradle
   - npm:10.9.0
